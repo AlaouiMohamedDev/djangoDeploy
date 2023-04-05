@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="space-y-5 m-5 py-10 px-10 transition duration-150 hover:rotate-90 hover:translate-x-96 ease-in-out border border-gray-300 w-max shadow hover:bg-red-200/20 hover:border-red-700 hover:border-2">
+        <h1 class="text-red-500 text-3xl font-bold">All Posts</h1>
+        {% for post in posts %}
+        <h2 class="text-blue-500 font-bold text-2xl ">{{ post.title }}</h2>
+        <p class="text-green-500 font-semibold text-xl px-2">{{ post.content }}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
